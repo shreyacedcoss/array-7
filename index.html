@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task7</title>
+</head>
+<body>
+    <h>Add one more column for quantity available for each of the product. It will be updated when a product is added to cart.</h>
+    <button onclick="fun()">Data</button>
+    <button onclick="fun2()">update</button>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <p id="p6"></p>
+    
+</body>
+<script>
+    var data1={
+        name: "samsung",model:"Galaxy",memory:32,price:15000,
+        quantity:20,chk:"<input type='checkbox'id='d1'>",
+    }
+    var data2={
+        name: "nokia",model:"S730",memory:128,price:22000,
+        quantity:15,chk:"<input type='checkbox'id='d2'>",
+    }
+    var data3={
+        name: "xiomi",model:"Note",memory:32,price:12000,
+        quantity:21,chk:"<input type='checkbox'id='d3'>",
+    }
+    var data4={
+        name: "motorala",model:"G10",memory:32,price:15000,
+        quantity:13,chk:"<input type='checkbox'id='d4'>",
+    }
+    var data5={
+        name: "apple",model:"S12",memory:64,price:25000,
+        quantity:18,chk:"<input type='checkbox'id='d5'>",
+    }
+    var arr=[data1,data2,data3,data4,data5]
+    function fun(){
+    table="<table><tr><th>Company</th><th>Model</th><th>Memory</th><th>Price</th><th>Quantity</th><th>Cart</th></tr>"
+    arr.forEach(element => {
+        table+="<tr><td>"+
+        element.name+
+        "</td><td>"+
+       
+        element.model+
+        "</td><td>"+
+        element.memory+
+        "</td><td>"+
+            element.price+
+        "</td><td>"+
+        element.quantity+
+        "</td><td>"+
+        element.chk+
+        "</td></tr>"
+
+
+    });
+    table+="</table>"
+    document.getElementById("p1").innerHTML=table
+}
+function fun2()
+{
+    table="<table><tr><th>Company</th><th>Model</th><th>Memory</th><th>Price</th><th>Quantity</th>"
+        var quantity
+        if(arr.name="samsung" && d1.checked){
+            quantity==arr[0].quantity-1
+            document.getElementById("p2").innerHTML="updated quantity of " + arr[0].name + " is " + quantity
+
+        }
+         else if(arr.name="nokia" && d1.checked){
+            quantity==arr[0].quantity-1
+            console.log(quantity)
+           
+            
+
+        }
+
+
+}
+
+
+</script>
+</html>
